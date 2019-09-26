@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerMovement movement;
+    public GameManager gameManager;
     void OnCollisionEnter(Collision collisionInfo){
         // Debug.Log("Hit Ground");
 
@@ -13,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("WE hit an obstacle");
 
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
 
         }
     }
