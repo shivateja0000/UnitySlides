@@ -13,8 +13,16 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = ((int)Player.position.z).ToString();
         
+            scoreText.text = ((int)Player.position.z).ToString();
         
+        if(Player.position.z> 70)
+        {
+            scoreText.text = "Game Completed";
+
+        }
+
+       
+
     }
 }

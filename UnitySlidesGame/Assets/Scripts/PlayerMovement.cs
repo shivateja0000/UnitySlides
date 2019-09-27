@@ -27,7 +27,13 @@ public class PlayerMovement : MonoBehaviour
         }
         if(rb.position.y <-1f){
            FindObjectOfType<GameManager>().EndGame();
-        }   
-        
+        }  
+        if(rb.position.z > 70f)
+        {
+            FindObjectOfType<GameManager>().Credit();
+
         }
+
+
+    }
 }
